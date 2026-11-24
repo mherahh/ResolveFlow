@@ -1,0 +1,14 @@
+# Versions below are the ones the test suite was run against.
+fastapi==0.163.1
+uvicorn==0.54.0
+sqlalchemy==2.1.8
+pydantic==2.14.3
+pydantic-settings==2.16.3
+python-dotenv==1.2.4
+langchain==1.5.0
+langchain-core==1.8.1
+langchain-openai==1.8.0
+langgraph==1.2.22
+httpx==0.28.1
+pytest==9.2.0
+# For PostgreSQL in production, also install:  psycopg2-binary

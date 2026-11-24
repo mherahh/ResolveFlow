@@ -1,0 +1,19 @@
+# Example Render blueprint for the backend. NOT tested in this project's development environment.
+services:
+  - type: web
+    name: resolveflow-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt psycopg2-binary
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: LLM_PROVIDER
+        value: openrouter
+      - key: LLM_MODEL
+        value: openai/gpt-4o-mini
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: FRONTEND_ORIGIN
+        sync: false
